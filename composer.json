@@ -1,0 +1,84 @@
+{
+  "name": "leadingfellows/reveal_template",
+  "description": "template starterkit for reveal.js",
+  "type": "project",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "",
+      "role": ""
+    }
+  ],
+  "repositories": {
+    "asset-packagist" : {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  },
+  "require": {
+    "composer/installers": "^1.2",
+    "cweagans/composer-patches": "^1.6",
+    "fxp/composer-asset-plugin": "^1.4",
+    "oomphinc/composer-installers-extender": "^1.1",
+    "wikimedia/composer-merge-plugin": "^1.4",
+    "npm-asset/reveal.js": "^3.7"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "preferred-install": {
+      "*": "dist",
+      "bower-asset/reveal.js-plugins": "source"
+    },
+    "sort-packages": true,
+    "secure-http": false,
+    "optimize-autoloader": true,
+    "discard-changes": true,
+    "platform": {
+    }
+  },
+  "extra": {
+    "merge-plugin": {
+      "include": [
+        "composer.plugins.json"
+      ],
+      "recurse": true,
+      "replace": true,
+      "ignore-duplicates": false,
+      "merge-dev": true,
+      "merge-extra": true,
+      "merge-extra-deep": true,
+      "merge-scripts": false
+    },
+    "installer-types": [
+      "bower-asset-library", "revealjs-plugin", "bower-asset", "npm-asset"
+    ],
+    "installer-paths": {
+      "reveal.js": ["npm-asset/reveal.js", "bower-asset/reveal.js"]
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "cp -f ./include/index.html ./reveal.js/index.html",
+      "cd reveal.js && npm install",
+      "rm -f ./reveal.js/custom && ln -s ${PWD}/custom ./reveal.js/custom"
+    ],
+    "post-update-cmd": [
+      "cp -f ./include/index.html ./reveal.js/index.html",
+      "cd reveal.js && npm install",
+      "rm -f ./reveal.js/custom && ln -s ${PWD}/custom ./reveal.js/custom"
+    ],
+    "post-create-project-cmd": [
+      "cp -f ./include/index.html ./reveal.js/index.html",
+      "cd reveal.js && npm install",
+      "rm -f ./reveal.js/custom && ln -s ${PWD}/custom ./reveal.js/custom"
+    ],
+    "relink": [
+      "cp -f ./include/index.html ./reveal.js/index.html",
+      "rm -f ./reveal.js/custom && ln -s ${PWD}/custom ./reveal.js/custom"
+    ],
+    "serve": [
+      "cd reveal.js && npm start"
+    ]
+  }
+}

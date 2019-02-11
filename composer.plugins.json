@@ -1,0 +1,37 @@
+{
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    },
+      {
+        "type": "package",
+        "package": {
+          "name": "rajgoel/reveal.js-plugins",
+          "type": "revealjs-plugin",
+          "version": "dev",
+          "source": {
+            "url": "https://github.com/rajgoel/reveal.js-plugins.git",
+            "type": "git",
+            "reference": "master"
+          }
+        }
+      }
+
+  ],
+  "require": {
+    "bower-asset/font-awesome": "^5.7",
+    "npm-asset/reveal.js-menu": "^1.2",
+    "bower-asset/reveal_external": "^1.2",
+    "rajgoel/reveal.js-plugins": "@dev"
+
+  },
+  "extra": {
+    "installer-paths": {
+      "reveal.js/plugin/fontawesome": ["bower-asset/font-awesome", "npm-asset/font-awesome"],
+      "reveal.js/plugin/menu": ["npm-asset/reveal.js-menu", "bower-asset/reveal.js-menu"],
+      "reveal.js/plugin/reveal.js-plugins": ["rajgoel/reveal.js-plugins", "bower-asset/reveal.js-plugins", "npm-asset/reveal.js-plugins"],
+      "reveal.js/plugin/reveal_external" : ["bower-asset/reveal_external"]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.custom-text {
+  width:100%;
+  font-size: 0.8em !important;
+  text-align: left;
+}
+
+.custom-small-text {
+  font-size: 0.6em !important;
+}
+
+.code-small {
+  font-size: 0.7em !important; text-align:left; width: 100%;
+}
+
+.code-verysmall {
+  font-size: 0.5em !important; text-align:left; width: 100%;
+}
