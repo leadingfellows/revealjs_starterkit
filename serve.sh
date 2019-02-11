@@ -2,4 +2,4 @@
 
 ROOT=`dirname "$0"`
 cd ${ROOT}
-composer run serve --timeout=0
+composer run serve --timeout=0 -- -- $*
