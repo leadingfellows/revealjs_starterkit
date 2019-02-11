@@ -1,6 +1,6 @@
 {
-  "name": "leadingfellows/reveal_template",
-  "description": "template starterkit for reveal.js",
+  "name": "leadingfellows/revealjs_starterkit",
+  "description": "starterkit for reveal.js",
   "type": "project",
   "license": "GPL-2.0-or-later",
   "authors": [
