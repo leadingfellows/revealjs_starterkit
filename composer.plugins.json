@@ -20,14 +20,17 @@
 
   ],
   "require": {
+    "bower-asset/jquery": "^3.3",
+	"bower-asset/jquery-once": "^2.1",
     "bower-asset/font-awesome": "^5.7",
     "npm-asset/reveal.js-menu": "^1.2",
     "bower-asset/reveal_external": "^1.2",
     "rajgoel/reveal.js-plugins": "@dev"
-
   },
   "extra": {
     "installer-paths": {
+      "reveal.js/plugin/jquery-once": ["bower-asset/jquery-once"],
+      "reveal.js/plugin/jquery": ["bower-asset/jquery"],
       "reveal.js/plugin/fontawesome": ["bower-asset/font-awesome", "npm-asset/font-awesome"],
       "reveal.js/plugin/menu": ["npm-asset/reveal.js-menu", "bower-asset/reveal.js-menu"],
       "reveal.js/plugin/reveal.js-plugins": ["rajgoel/reveal.js-plugins", "bower-asset/reveal.js-plugins", "npm-asset/reveal.js-plugins"],

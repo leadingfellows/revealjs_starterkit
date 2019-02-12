@@ -1,0 +1,38 @@
+/* 1. Style header/footer <div> so they are positioned as desired. */
+#header-left {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+#header-right {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+#footer-left {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+.reveal.slide .slides > section.full-screen, .reveal.slide .slides > section > section.full-screen {
+    min-height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    position: absolute !important;
+    top: 0 !important;
+    align-items: center !important;
+}
+section.full-screen > h1, section.full-screen > h2, section.full-screen > h3 {
+    position: absolute !important;
+    top: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    left: 0 !important;
+    right: 0 !important;
+    text-align: center !important;
+}
+.print-pdf .reveal.slide .slides > section.full-screen, .print-pdf .reveal.slide .slides > section > section.full-screen {
+    min-height: 770px !important;
+    position: relative !important;
+}

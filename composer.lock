@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "45dd5cfa457db1fba4cf92502a504b44",
+    "content-hash": "3a1c8054c6664fad511ee677c5b800f3",
     "packages": [
         {
             "name": "bower-asset/font-awesome",
@@ -21,6 +21,64 @@
                 "shasum": null
             },
             "type": "bower-asset"
+        },
+        {
+            "name": "bower-asset/jquery",
+            "version": "3.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jquery/jquery-dist.git",
+                "reference": "9e8ec3d10fad04748176144f108d7355662ae75e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/9e8ec3d10fad04748176144f108d7355662ae75e",
+                "reference": "9e8ec3d10fad04748176144f108d7355662ae75e",
+                "shasum": null
+            },
+            "type": "bower-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "bower-asset/jquery-once",
+            "version": "2.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RobLoach/jquery-once.git",
+                "reference": "ee0abe4ba788e26c1a43c690cb0645564669b9e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RobLoach/jquery-once/zipball/ee0abe4ba788e26c1a43c690cb0645564669b9e4",
+                "reference": "ee0abe4ba788e26c1a43c690cb0645564669b9e4",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/jquery": "*"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "jquery.once.js",
+                "bower-asset-ignore": [
+                    "*.json",
+                    "test",
+                    "example",
+                    ".travis.yml",
+                    ".gitignore",
+                    "Gruntfile.js"
+                ]
+            },
+            "license": [
+                "GPL-2.0"
+            ],
+            "description": "Act on jQuery elements only once.",
+            "keywords": [
+                "jquery",
+                "jquery-plugin"
+            ],
+            "time": "2018-03-29T15:56:03+00:00"
         },
         {
             "name": "bower-asset/reveal_external",
