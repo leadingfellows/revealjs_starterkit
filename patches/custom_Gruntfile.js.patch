@@ -1,0 +1,25 @@
+diff --git a/gruntfile.js b/gruntfile.js
+index edebddd..ba90857 100644
+--- a/gruntfile.js
++++ b/gruntfile.js
+@@ -116,6 +116,7 @@ module.exports = grunt => {
+ 			bundle: {
+ 				src: [
+ 					'index.html',
++					'custom',
+ 					'css/**',
+ 					'js/**',
+ 					'lib/**',
+@@ -152,6 +153,12 @@ module.exports = grunt => {
+ 			html: {
+ 				files: root.map(path => path + '/*.html')
+ 			},
++			custom: {
++				files: root.map(path => path + '/**/*.*')
++			},
++			custom_: {
++				files: root.map(path => path + '/../**/*.*')
++			},
+ 			markdown: {
+ 				files: root.map(path => path + '/*.md')
+ 			},

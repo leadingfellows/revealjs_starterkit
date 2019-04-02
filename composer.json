@@ -55,27 +55,33 @@
     ],
     "installer-paths": {
       "reveal.js": ["npm-asset/reveal.js", "bower-asset/reveal.js"]
-    }
+    },
+    "patches": {
+		"npm-asset/reveal.js": {
+			"custom patch": "patches/custom_Gruntfile.js.patch"
+		}
+		
+	}
   },
   "scripts": {
     "post-install-cmd": [
-      "cp -f ./include/index.html ./reveal.js/index.html",
+      "cp -f ${PWD}/include/index.html ${PWD}/reveal.js/index.html",
       "cd reveal.js && npm install",
-      "rm -f ./reveal.js/custom && ln -s ${PWD}/custom ./reveal.js/custom"
+      "rm -f ${PWD}/reveal.js/custom && ln -s ${PWD}/custom ${PWD}/reveal.js/custom"
     ],
     "post-update-cmd": [
-      "cp -f ./include/index.html ./reveal.js/index.html",
+      "cp -f ${PWD}/include/index.html ${PWD}/reveal.js/index.html",
       "cd reveal.js && npm install",
-      "rm -f ./reveal.js/custom && ln -s ${PWD}/custom ./reveal.js/custom"
+      "rm -f ${PWD}/reveal.js/custom && ln -s ${PWD}/custom ${PWD}/reveal.js/custom"
     ],
     "post-create-project-cmd": [
-      "cp -f ./include/index.html ./reveal.js/index.html",
+      "cp -f ${PWD}/include/index.html ${PWD}/reveal.js/index.html",
       "cd reveal.js && npm install",
-      "rm -f ./reveal.js/custom && ln -s ${PWD}/custom ./reveal.js/custom"
+      "rm -f ${PWD}/reveal.js/custom && ln -s ${PWD}/custom ${PWD}/reveal.js/custom"
     ],
     "relink": [
-      "cp -f ./include/index.html ./reveal.js/index.html",
-      "rm -f ./reveal.js/custom && ln -s ${PWD}/custom ./reveal.js/custom"
+      "cp -f ${PWD}/include/index.html ${PWD}/reveal.js/index.html",
+      "rm -f ${PWD}/reveal.js/custom && ln -s ${PWD}/custom ${PWD}/reveal.js/custom"
     ],
     "serve": [
       "cd reveal.js && npm start"
